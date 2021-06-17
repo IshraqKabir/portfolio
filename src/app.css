@@ -1,0 +1,21 @@
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #35dad2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+h3 svg {
+  width: 20em;
+}
+
+.path {
+  width: 1000px;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dashoffset: 20;
+}
+
