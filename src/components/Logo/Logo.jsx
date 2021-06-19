@@ -28,17 +28,14 @@ const Logo = ({ setShowApp }) => {
         easing: "easeInOutSine",
         duration: 2500,
       })
-      .add(
-        {
+      .add( {
           targets: ".logo_text",
           strokeDashoffset: [anime.setDashoffset, 0],
           opacity: 1,
           fill: "#fff",
           easing: "easeInOutSine",
           duration: 2500,
-        },
-        "-=2000"
-      )
+        }, "-=2000")
       .add({
         targets: ".logo",
         translateX: 10 - x,

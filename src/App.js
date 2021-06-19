@@ -1,22 +1,122 @@
-import Logo from "./components/Logo/Logo.jsx";
 import Hero from "./components/Hero/Hero.jsx";
+import DoubleSlideOutReveal from "./components/animation/DoubleSlideOutReveal/DoubleSlideOutReveal.jsx";
 
 import "./app.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [showApp, setShowApp] = useState(false);
 
-  useEffect(() => {
-    console.log("showApp:" + showApp);
-  }, [showApp]);
-
   return (
-    <>
-      <div className="container">
-        <Hero setShowApp={setShowApp} />
+    <DoubleSlideOutReveal start={true}>
+      <div className="container" style={{}}>
+        <Hero showApp={showApp} setShowApp={setShowApp} />
+        {showApp && (
+          <div>
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+            Lorem100
+          </div>
+        )}
       </div>
-    </>
+    </DoubleSlideOutReveal>
   );
 }
 

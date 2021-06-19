@@ -8,4 +8,31 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
+
+.content {
+  color: #fff;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.hero-title-text {
+  height: 0px;
+  overflow: hidden;
+}
+
+.hero-sub_title-container {
+  margin: 1rem 0;
+}
+
+.hero-sub_title {
+  font-style: italic;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
