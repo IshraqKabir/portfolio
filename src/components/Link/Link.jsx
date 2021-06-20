@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import "./link.css";
 
 import DoubleSlideReveal from "../animation/DoubleSlideReveal/DoubleSlideReveal.jsx";
@@ -17,13 +17,18 @@ const Link = ({ label, page_name }) => {
       {isHovered ? (
         <div style={{ width: "100%" }}>
           <DoubleSlideReveal start={true}>
-            <div
-              className="link-underline"
-            ></div>
+            <div className="link-underline"></div>
           </DoubleSlideReveal>
         </div>
-      ): (
-        <div style={{ height: "2px", width: "100%", backgroundColor: "transparent"}} />
+      ) : (
+        <div
+          style={{
+            height: "2px",
+            width: "100%",
+            backgroundColor: "transparent",
+            marginTop: "2px",
+          }}
+        />
       )}
     </li>
   );

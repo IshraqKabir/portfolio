@@ -7,8 +7,6 @@ const Logo = ({ setShowApp }) => {
   const elRef = useRef(null);
 
   useEffect(() => {
-    const { x, y } = document.querySelector('.logo').getBoundingClientRect();
-
     elRef.current = anime
       .timeline({
         loop: false,
@@ -41,8 +39,8 @@ const Logo = ({ setShowApp }) => {
       )
       .add({
         targets: ".logo",
-        translateX: 10 - x,
-        translateY: -y,
+        top: 0,
+        left: 0,
         scale: [1, 0.5],
         easing: "easeInOutQuad",
         duration: 750,

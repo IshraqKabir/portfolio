@@ -1,0 +1,22 @@
+.burger-icon {
+  margin-right: 1rem;
+  margin-top: -5px;
+  cursor: pointer;
+}
+
+.burger-icon-line {
+  stroke: rgb(176, 178, 195);
+  stroke-width: 2px;
+  transition: stroke 0.25s ease-in-out;
+}
+
+@media only screen and (min-width: 750px) {
+  .burger-icon {
+    display: none;
+  }
+}
+
+.burger-icon:hover .burger-icon-line {
+  stroke: #fff;
+}
+

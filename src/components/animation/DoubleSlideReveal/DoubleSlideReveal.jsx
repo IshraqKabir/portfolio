@@ -1,5 +1,5 @@
 import anime from "animejs";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const DoubleSlideReveal = ({
   start,
@@ -12,19 +12,7 @@ const DoubleSlideReveal = ({
   useEffect(() => {
     if (start === true) {
       anime
-        .timeline({
-          loop: false,
-          begin: () => {
-            // console.log(`${children.props.className} began`, classNames);
-            // console.log('began first-drawer', document.querySelector(`.${classNames[0]}`))
-            // console.log('began second-drawer', document.querySelector(`.${classNames[1]}`))
-          },
-          complete: () => {
-            // console.log(`${children.props.className} completed`, classNames);
-            // console.log('ended first-drawer', document.querySelector(`.${classNames[0]}`))
-            // console.log('ended second-drawer', document.querySelector(`.${classNames[1]}`))
-          },
-        })
+        .timeline({ loop: false })
         .add({
           targets: `.${classNames[0]}`,
           width: 0,

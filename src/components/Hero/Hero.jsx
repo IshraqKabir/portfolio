@@ -31,25 +31,25 @@ const Hero = ({ showApp, setShowApp }) => {
       style={{ backgroundColor: `${showApp ? "transparent" : `#1c1d25`}` }}
     >
       <Logo setShowApp={setShowApp} />
-      {showApp && (
-        <>
-          <InteractiveBackground />
-          <div className="content">
-            <DoubleSlideReveal start={true}>
-              <div className="hero-title">
-                {[...title].map((letter, index) => (
-                  <span key={index} className="hero-title-letter">
-                    {letter}
-                  </span>
-                ))}
-              </div>
-            </DoubleSlideReveal>
-            <DoubleSlideReveal start={true}>
-              <div className="hero-sub_title">{sub_title}</div>
-            </DoubleSlideReveal>
-          </div>
-        </>
-      )}
+       {showApp && (
+         <> 
+           <InteractiveBackground />
+           <div className="content">
+             <DoubleSlideReveal start={true}>
+               <div className="hero-title"> 
+                 {[...title].map((letter, index) => ( 
+                   <span key={index} className="hero-title-letter">
+                     {letter} 
+                   </span> 
+                 ))} 
+               </div> 
+             </DoubleSlideReveal>
+             <DoubleSlideReveal start={true}> 
+               <div className="hero-sub_title">{sub_title}</div> 
+             </DoubleSlideReveal>
+           </div> 
+         </>
+       )}
     </div>
   );
 };

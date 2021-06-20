@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   font-weight: 600;
   color: rgb(176, 178, 195);
   transition: color 0.5s;
@@ -24,5 +24,9 @@
 .link-underline {
   height: 2px;
   width: 100%;
+  margin-top: 2px;
+  animation: fadeIn 0.5s;
 }
+
+
 
