@@ -2,6 +2,7 @@
   cursor: pointer;
   position: fixed;
   width: 400px;
+  z-index: 2;
 }
 
 .logo_icon, .logo_text {

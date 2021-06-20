@@ -1,9 +1,10 @@
 import Logo from "../Logo/Logo.jsx";
 import "./hero.css";
 
-import DoubleSlideOutReveal from "../animation/DoubleSlideOutReveal/DoubleSlideOutReveal.jsx";
 import InteractiveBackground from "../animation/InteractiveBackground/InteractiveBackground.jsx";
 import { useEffect } from "react";
+
+import DoubleSlideReveal from "../animation/DoubleSlideReveal/DoubleSlideReveal.jsx";
 
 const Hero = ({ showApp, setShowApp }) => {
   const title = "Ishraq Kabir";
@@ -11,27 +12,30 @@ const Hero = ({ showApp, setShowApp }) => {
 
   useEffect(() => {
     if (showApp) {
-      console.log(
-        "hero-sub_title-container",
-        document
-          .querySelector(".hero-sub_title-container")
-          ?.getBoundingClientRect()
-      );
-      console.log(
-        "hero-sub_title",
-        document.querySelector(".hero-sub_title")?.getBoundingClientRect()
-      );
+      // console.log(
+      //   "hero-sub_title-container",
+      //   document
+      //     .querySelector(".hero-sub_title-container")
+      //     ?.getBoundingClientRect()
+      // );
+      // console.log(
+      //   "hero-sub_title",
+      //   document.querySelector(".hero-sub_title")?.getBoundingClientRect()
+      // );
     }
   }, [showApp]);
 
   return (
-    <div className="hero-container">
+    <div
+      className="hero-container"
+      style={{ backgroundColor: `${showApp ? "transparent" : `#1c1d25`}` }}
+    >
       <Logo setShowApp={setShowApp} />
       {showApp && (
         <>
           <InteractiveBackground />
           <div className="content">
-            <DoubleSlideOutReveal start={showApp}>
+            <DoubleSlideReveal start={true}>
               <div className="hero-title">
                 {[...title].map((letter, index) => (
                   <span key={index} className="hero-title-letter">
@@ -39,10 +43,10 @@ const Hero = ({ showApp, setShowApp }) => {
                   </span>
                 ))}
               </div>
-            </DoubleSlideOutReveal>
-            <DoubleSlideOutReveal start={showApp}>
+            </DoubleSlideReveal>
+            <DoubleSlideReveal start={true}>
               <div className="hero-sub_title">{sub_title}</div>
-            </DoubleSlideOutReveal>
+            </DoubleSlideReveal>
           </div>
         </>
       )}

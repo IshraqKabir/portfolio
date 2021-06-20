@@ -1,3 +1,12 @@
 .topbar-container {
   background-color: #1c1d25;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
 }

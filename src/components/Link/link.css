@@ -1,0 +1,28 @@
+.link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-weight: 600;
+  color: rgb(176, 178, 195);
+  transition: color 0.5s;
+  cursor: pointer;
+  position: relative;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.link-container:hover {
+  color: #fff;
+}
+
+.link-underline {
+  height: 2px;
+  width: 100%;
+}
+

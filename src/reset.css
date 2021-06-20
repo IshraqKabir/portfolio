@@ -365,6 +365,6 @@ textarea {
     padding: 0.2em 0;
 }
 
-body {
-     overflow-x: hidden;
-}
+/* body { */
+/*      overflow-x: hidden; */
+/* } */

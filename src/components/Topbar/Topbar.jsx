@@ -1,11 +1,10 @@
-import './topbar.css';
+import "./topbar.css";
+import Link from "../Link/Link.jsx";
 
 const Topbar = () => {
-  return (
-    <div className="topbar-container">
+  return <ul className="topbar-container">
+    <Link label="Home" />
+    </ul>;
+};
 
-    </div>
-  )
-}
-
-export default Topbar
+export default Topbar;
