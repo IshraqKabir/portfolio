@@ -14,8 +14,16 @@ export default function NavModal({ closeNavModal }: IProps): ReactElement | null
     useEffect(() => {
         open();
 
+        const onKeyDown = ({ key }: KeyboardEvent) => {
+            if (key === "Escape") {
+                close();
+            }
+        }
+
+        document.addEventListener('keydown', onKeyDown);
+
         return () => {
-            close();
+            document.removeEventListener('keydown', onKeyDown);
         }
     }, []);
 
