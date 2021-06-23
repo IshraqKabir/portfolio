@@ -1,16 +1,19 @@
-import anime from "animejs";
-import { ReactElement, useEffect } from "react";
+import anime, { AnimeTimelineInstance } from "animejs";
+import { ReactElement, useEffect, useRef } from "react";
+
 import "./closeIcon.css";
+
 interface IProps { handleClick: Function; }
 
 const CloseIcon = ({ handleClick }: IProps): ReactElement | null => {
+    const elRef = useRef<AnimeTimelineInstance | null>(null);
 
     useEffect(() => {
         onOpen();
     }, []);
 
     const onOpen = () => {
-        anime.timeline({ loop: false })
+        elRef.current = anime.timeline({ loop: false })
             .add({
                 targets: '.close-icon-first-line, .close-icon-second-line',
                 strokeDashoffset: [anime.setDashoffset, 0],
@@ -18,11 +21,11 @@ const CloseIcon = ({ handleClick }: IProps): ReactElement | null => {
                 opacity: [0, 1],
                 duration: 250,
                 delay: (_, i) => i * 250,
-            })
+            });
     }
 
     const onClose = () => {
-        anime.timeline({ loop: false, complete: () => { handleClick(); } })
+        elRef.current = anime.timeline({ loop: false, complete: () => { handleClick(); } })
             .add({
                 targets: '.close-icon-line',
                 opacity: [1, 0],

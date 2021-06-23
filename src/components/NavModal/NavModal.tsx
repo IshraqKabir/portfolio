@@ -1,6 +1,7 @@
 import anime from "animejs";
 import { ReactElement, useEffect, useState } from "react";
 import CloseIcon from "../CloseIcon/CloseIcon";
+import Link from "../Link/Link";
 import "./navModal.css";
 
 interface IProps {
@@ -70,6 +71,12 @@ export default function NavModal({ closeNavModal }: IProps): ReactElement | null
                 <>
                     <div className="close-icon-container">
                         <CloseIcon handleClick={close} />
+                    </div>
+                    <div className="navModal-links">
+                        <Link label="Home" color="#fff" show_underline={false} />
+                        <Link label="Experience" color="#fff" show_underline={false} />
+                        <Link label="Projects" color="#fff" show_underline={false} />
+                        <Link label="About Me" color="#fff" show_underline={false} />
                     </div>
                 </>
             )}
