@@ -23,7 +23,9 @@ const Link = ({ label, color = "rgb(176, 178, 195)", page_name, show_underline =
             }}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <div className="link-text" style={{ color }}>{label}</div>
+            <div className="link-text" style={{ color: !isHovered ? color : "#fff" }}>
+                {label}
+            </div>
             {isHovered && show_underline ? (
                 <div style={{ width: "100%" }}>
                     <DoubleSlideReveal start={true}>

@@ -45,6 +45,9 @@ export default function NavModal({ closeNavModal }: IProps): ReactElement | null
         anime.timeline({
             loop: false,
             endDelay: 100,
+            begin: () => {
+                setShowChildren(false);
+            },
             complete: () => {
                 closeNavModal();
             }

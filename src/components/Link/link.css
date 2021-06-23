@@ -16,10 +16,6 @@
   to { opacity: 1; }
 }
 
-.link-container:hover {
-  color: #fff;
-}
-
 .link-underline {
   height: 2px;
   width: 100%;

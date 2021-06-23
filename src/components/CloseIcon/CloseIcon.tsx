@@ -15,6 +15,11 @@ const CloseIcon = ({ handleClick }: IProps): ReactElement | null => {
     const onOpen = () => {
         elRef.current = anime.timeline({ loop: false })
             .add({
+                targets: '.close-icon-container',
+                opacity: 1,
+                duration: 0,
+            })
+            .add({
                 targets: '.close-icon-first-line, .close-icon-second-line',
                 strokeDashoffset: [anime.setDashoffset, 0],
                 easing: 'easeInOutQuad',
@@ -28,7 +33,6 @@ const CloseIcon = ({ handleClick }: IProps): ReactElement | null => {
         elRef.current = anime.timeline({ loop: false, complete: () => { handleClick(); } })
             .add({
                 targets: '.close-icon-line',
-                opacity: [1, 0],
                 duration: 250,
             });
     }
@@ -37,7 +41,6 @@ const CloseIcon = ({ handleClick }: IProps): ReactElement | null => {
         <svg
             width="25"
             height="25"
-            className="close-icon-container"
             onClick={onClose}
         >
             <line

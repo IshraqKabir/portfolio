@@ -14,7 +14,7 @@
 }
 
 .hero-title {
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: bold;
   overflow: hidden;
   padding: 5px;
@@ -26,8 +26,11 @@
 
 .hero-sub_title {
   font-style: italic;
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding: 0.5rem 0;
+}
+
+.hero-sub_title-container {
   margin: 2rem 0;
 }
 

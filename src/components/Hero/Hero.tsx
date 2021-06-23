@@ -34,9 +34,11 @@ const Hero = ({ showApp, setShowApp }: IProps): ReactElement | null => {
                                 ))}
                             </div>
                         </DoubleSlideReveal>
-                        <DoubleSlideReveal start={true}>
-                            <div className="hero-sub_title">{sub_title}</div>
-                        </DoubleSlideReveal>
+                        <div className="hero-sub_title-container">
+                            <DoubleSlideReveal start={true}>
+                                <div className="hero-sub_title">{sub_title}</div>
+                            </DoubleSlideReveal>
+                        </div>
                     </div>
                 </>
             )}
