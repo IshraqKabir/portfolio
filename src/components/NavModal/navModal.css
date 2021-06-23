@@ -1,0 +1,24 @@
+.navModal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: linear-gradient(to right, #101c3c, #2359a4);
+}
+
+.navModal-underlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: #ef463c;
+}
+
+.close-icon-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+

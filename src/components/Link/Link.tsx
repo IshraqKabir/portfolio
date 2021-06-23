@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 import "./link.css";
 
-import DoubleSlideReveal from "../animation/DoubleSlideReveal/DoubleSlideReveal.jsx";
+import DoubleSlideReveal from "../animation/DoubleSlideReveal/DoubleSlideReveal";
 
-const Link = ({ label, page_name }) => {
+interface IProps {
+    label: string;
+    page_name?: string;
+}
+
+const Link = ({ label, page_name }: IProps): ReactElement | null => {
   const [isHovered, setIsHovered] = useState(false);
+
+  console.log(page_name);
+
   return (
     <li
       className="link-container"

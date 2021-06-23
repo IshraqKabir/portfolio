@@ -1,0 +1,17 @@
+.close-icon-container {
+    cursor: pointer;
+}
+
+.close-icon-line {
+    opacity: 0;
+    stroke: rgb(176, 178, 195);
+    stroke-width: 3px;
+    transition: stroke 0.25s ease-in-out;
+}
+
+.close-icon-container:hover .close-icon-line {
+  stroke: #fff;
+}
+
+
+
