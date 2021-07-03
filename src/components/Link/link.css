@@ -9,6 +9,7 @@
   cursor: pointer;
   position: relative;
   animation: fadeIn 1s;
+  height: 100%;
 }
 
 @keyframes fadeIn {
@@ -17,11 +18,14 @@
 }
 
 .link-underline {
-  height: 2px;
+  height: 0px;
   width: 100%;
   margin-top: 2px;
   animation: fadeIn 0.5s;
 }
 
+.link-text {
+    padding: 0.3rem 0rem;
+}
 
 

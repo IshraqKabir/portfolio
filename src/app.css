@@ -4,3 +4,7 @@
   overflow-x: hidden;
 }
 
+.container {
+    overflow: hidden;
+}
+

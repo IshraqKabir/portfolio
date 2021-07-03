@@ -1,20 +1,24 @@
 .logo {
   cursor: pointer;
   position: fixed;
-  width: 400px;
+  width: 150px;
   z-index: 2;
 }
 
-.logo_icon, .logo_text {
+.logo_text {
   stroke: #fff;
-  stroke-width: 1px;
   stroke-dashoffset: 0;
 }
 
 .logo_text {
-  fill: #000;
   opacity: 1;
-  stroke-width: 0.5px;
+  stroke: #fff;
+  stroke-width: 150px;
+  fill: #1c1d25;
+}
+
+.logo_icon {
+    display: none;
 }
 
 

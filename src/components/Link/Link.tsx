@@ -35,7 +35,7 @@ const Link = ({ label, color = "rgb(176, 178, 195)", page_name, show_underline =
             ) : (
                 <div
                     style={{
-                        height: "2px",
+                        height: "0px",
                         width: "100%",
                         backgroundColor: "transparent",
                         marginTop: "2px",
