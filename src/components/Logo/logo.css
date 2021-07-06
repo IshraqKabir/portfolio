@@ -6,15 +6,13 @@
 }
 
 .logo_text {
-  stroke: #fff;
   stroke-dashoffset: 0;
 }
 
 .logo_text {
   opacity: 1;
-  stroke: #fff;
   stroke-width: 150px;
-  fill: #1c1d25;
+  stroke: #fff;
 }
 
 .logo_icon {

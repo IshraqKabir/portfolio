@@ -5,6 +5,7 @@ import InteractiveBackground from "../animation/InteractiveBackground/Interactiv
 import { ReactElement } from "react";
 
 import DoubleSlideReveal from "../animation/DoubleSlideReveal/DoubleSlideReveal";
+import Button from "../Button/Button";
 
 interface IProps {
     showApp: boolean;
@@ -39,6 +40,8 @@ const Hero = ({ showApp, setShowApp }: IProps): ReactElement | null => {
                                 <div className="hero-sub_title">{sub_title}</div>
                             </DoubleSlideReveal>
                         </div>
+
+                        <Button label="About Me" />
                     </div>
                 </>
             )}
