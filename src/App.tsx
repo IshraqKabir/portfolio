@@ -10,16 +10,18 @@ function App() {
     const [showApp, setShowApp] = useState(false);
 
     return (
-        <DoubleSlideReveal start={true}>
-            <div className="container" style={{}}>
-                <Hero showApp={showApp} setShowApp={setShowApp} />
-                {showApp && (
-                    <>
-                        <Topbar />
-                    </>
-                )}
-            </div>
-        </DoubleSlideReveal>
+        <>
+            <DoubleSlideReveal start={true}>
+                <div className="container" style={{}}>
+                    <Hero showApp={showApp} setShowApp={setShowApp} />
+                    {showApp && (
+                        <>
+                            <Topbar />
+                        </>
+                    )}
+                </div>
+            </DoubleSlideReveal>
+        </>
     );
 }
 

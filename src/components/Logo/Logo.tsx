@@ -48,21 +48,21 @@ const Logo = ({ setShowApp }: IProps) => {
         <svg viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg"
             className="logo"
         >
-            <path className="logo_text" d="M403.5 878.5V129" stroke="url(#paint1_linear)" stroke-width="100" />
-            <path className="logo_text" d="M713.5 878.5V129" stroke="url(#paint2_linear)" stroke-width="100" />
-            <path className="logo_text" d="M1195.5 854.5L864 496.5L1195.5 172" stroke="url(#paint0_linear)" stroke-width="100" />
+            <path className="logo_text" d="M403.5 878.5V129" stroke="url(#paint1_linear)" strokeWidth="100" />
+            <path className="logo_text" d="M713.5 878.5V129" stroke="url(#paint2_linear)" strokeWidth="100" />
+            <path className="logo_text" d="M1195.5 854.5L864 496.5L1195.5 172" stroke="url(#paint0_linear)" strokeWidth="100" />
             <defs>
                 <linearGradient id="paint0_linear" x1="1029.75" y1="172" x2="1029.75" y2="854.5" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#00B4DB" />
-                    <stop offset="1" stop-color="#00B4DB"/>
+                    <stop stopColor="#00B4DB" />
+                    <stop offset="1" stopColor="#00B4DB"/>
                 </linearGradient>
                 <linearGradient id="paint1_linear" x1="404" y1="129" x2="404" y2="878.5" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#00B4DB" />
-                    <stop offset="1" stop-color="#00B4DB"/>
+                    <stop stopColor="#00B4DB" />
+                    <stop offset="1" stopColor="#00B4DB"/>
                 </linearGradient>
                 <linearGradient id="paint2_linear" x1="714" y1="129" x2="714" y2="878.5" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#00B4DB" />
-                    <stop offset="1" stop-color="#00B4DB"/>
+                    <stop stopColor="#00B4DB" />
+                    <stop offset="1" stopColor="#00B4DB"/>
                 </linearGradient>
             </defs>
         </svg>

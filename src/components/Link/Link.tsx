@@ -13,8 +13,6 @@ interface IProps {
 const Link = ({ label, color = "rgb(176, 178, 195)", page_name, show_underline = true }: IProps): ReactElement | null => {
     const [isHovered, setIsHovered] = useState(false);
 
-    console.log(page_name);
-
     return (
         <li
             className="link-container"

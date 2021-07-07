@@ -17,7 +17,11 @@ const Hero = ({ showApp, setShowApp }: IProps): ReactElement | null => {
     useEffect(() => {
         if (showApp) {
             animeRef.current = anime.timeline({
-                loop: false
+                loop: false,
+                complete: () => {
+                    // @ts-ignore
+                    tawk();
+                }
             })
                 .add({
                     targets: '.letter',
@@ -51,14 +55,14 @@ const Hero = ({ showApp, setShowApp }: IProps): ReactElement | null => {
                         <div className="hi-text">
                             {[...hi_text.split("")].map((letter, index) => {
                                 return (
-                                    <span className="letter">{letter}</span>
+                                    <span key={index} className="letter">{letter}</span>
                                 )
                             })}
                         </div>
                         <div className="hero-title">
                             {[...title.split("")].map((letter, index) => {
                                 return (
-                                    <span className="letter">{letter}</span>
+                                    <span key={index} className="letter">{letter}</span>
                                 )
                             })}
                         </div>
@@ -74,7 +78,7 @@ const Hero = ({ showApp, setShowApp }: IProps): ReactElement | null => {
                                 I'm a full stack web developer passionate about creating web apps with awesome user experiences.
                                 I'm currently working as a freelance developer and looking for awesome remote opportunities.
                             </div>
-                            <Button label="Contact Me" />
+                            <Button label="Get In Touch" />
                         </div>
                     </div>
                 </>
