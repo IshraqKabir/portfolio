@@ -12,7 +12,7 @@
 .logo_text {
   opacity: 1;
   stroke-width: 150px;
-  stroke: #fff;
+  stroke: rgb(105, 55, 255);
 }
 
 .logo_icon {

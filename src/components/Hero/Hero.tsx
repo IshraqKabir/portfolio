@@ -2,10 +2,10 @@ import Logo from "../Logo/Logo";
 import "./hero.css";
 
 import InteractiveBackground from "../animation/InteractiveBackground/InteractiveBackground";
-import { ReactElement } from "react";
+import { ReactElement, useEffect, useRef } from "react";
 
-import DoubleSlideReveal from "../animation/DoubleSlideReveal/DoubleSlideReveal";
 import Button from "../Button/Button";
+import anime, { AnimeTimelineInstance } from "animejs";
 
 interface IProps {
     showApp: boolean;
@@ -13,8 +13,30 @@ interface IProps {
 }
 
 const Hero = ({ showApp, setShowApp }: IProps): ReactElement | null => {
-    const title = "Ishraq Kabir";
-    const sub_title = "Full Stack Developer";
+    const animeRef = useRef<AnimeTimelineInstance | null>(null);
+    useEffect(() => {
+        if (showApp) {
+            animeRef.current = anime.timeline({
+                loop: false
+            })
+                .add({
+                    targets: '.letter',
+                    opacity: [0, 1],
+                    duration: 100,
+                    delay: (_, i) => i * 50,
+                })
+                .add({
+                    targets: '.hero-content-container',
+                    opacity: [0, 1],
+                    translateY: '-20px',
+                    easing: 'easeInOutQuad',
+                })
+        }
+    }, [showApp]);
+
+    const hi_text = "Hi, my name is";
+    const title = "Ishraq Kabir.";
+    const another_title = "I build things for the web.";
 
     return (
         <div
@@ -26,22 +48,34 @@ const Hero = ({ showApp, setShowApp }: IProps): ReactElement | null => {
                 <>
                     <InteractiveBackground />
                     <div className="content">
-                        <DoubleSlideReveal start={true}>
-                            <div className="hero-title">
-                                {[title.split("")].map((letter, index) => (
-                                    <span key={index} className="hero-title-letter">
-                                        {letter}
-                                    </span>
-                                ))}
-                            </div>
-                        </DoubleSlideReveal>
-                        <div className="hero-sub_title-container">
-                            <DoubleSlideReveal start={true}>
-                                <div className="hero-sub_title">{sub_title}</div>
-                            </DoubleSlideReveal>
+                        <div className="hi-text">
+                            {[...hi_text.split("")].map((letter, index) => {
+                                return (
+                                    <span className="letter">{letter}</span>
+                                )
+                            })}
                         </div>
-
-                        <Button label="About Me" />
+                        <div className="hero-title">
+                            {[...title.split("")].map((letter, index) => {
+                                return (
+                                    <span className="letter">{letter}</span>
+                                )
+                            })}
+                        </div>
+                        <div className="hero-title another-title">
+                            {[...another_title.split("")].map((letter, index) => (
+                                <span key={index} className="letter">
+                                    {letter}
+                                </span>
+                            ))}
+                        </div>
+                        <div className="hero-content-container">
+                            <div className="hero-about-text">
+                                I'm a full stack web developer passionate about creating web apps with awesome user experiences.
+                                I'm currently working as a freelance developer and looking for awesome remote opportunities.
+                            </div>
+                            <Button label="Contact Me" />
+                        </div>
                     </div>
                 </>
             )}

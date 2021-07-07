@@ -36,9 +36,9 @@ const Logo = ({ setShowApp }: IProps) => {
             )
             .add({
                 targets: ".logo",
-                top: "5px",
+                top: "-15px",
                 left: "5px",
-                scale: [1, 0.5],
+                scale: [1, 0.3],
                 easing: "easeInOutQuad",
                 duration: 750,
             })

@@ -19,7 +19,6 @@ const Topbar = () => {
                 <Link label="Home" />
                 <Link label="Experience" />
                 <Link label="Projects" />
-                <Link label="Contact Me" />
                 <BurgerIcon openNavModal={show} />
             </ul>
         </>

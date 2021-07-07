@@ -2,7 +2,7 @@
   min-width: 100vw;
   min-height: 100vh;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,13 +12,31 @@
 
 .content {
   color: #fff;
+  padding: 3rem 1rem;
+}
+
+.hi-text {
+  color: rgb(105, 55, 255);
+  /* color: rgb(100, 255, 218); */
+  font-weight: 600;
+  font-size: 1.3rem;                               
+  padding: 5px;
+  margin-bottom: 1rem;
 }
 
 .hero-title {
-  font-size: 4.5rem;
+  font-size: clamp(40px, 3vw, 80px);
+  color: rgb(204, 214, 246);
   font-weight: bold;
   overflow: hidden;
   padding: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.another-title {
+  font-size: clamp(40px, 3vw, 80px);
+    color: rgb(136, 146, 176);
+    margin-bottom: 1rem;
 }
 
 .hero-title-text {
@@ -31,7 +49,20 @@
   padding: 0.5rem 0;
 }
 
-.hero-sub_title-container {
-  margin: 2rem 0;
+.letter {
+    opacity: 0;
+}
+
+.hero-content-container {
+    opacity: 0;
+    padding: 5px;
+    margin-top: 40px;
+}
+
+.hero-about-text {
+    max-width: 40ch;
+    padding: 1rem 0rem;
+    line-height: 1.5;
+    color: rgb(136, 146, 176);
 }
 
