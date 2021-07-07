@@ -45,6 +45,10 @@
     transform: scale(0.5) translate(-50%, -50%);
 }
 
+.button-text {
+    padding: 0.3rem 0rem; 
+}
+
 .button-outer-container:hover .button-container {
     /* background-color: #f44330; */
     background-color: rgb(255, 149, 215);

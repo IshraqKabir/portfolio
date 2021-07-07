@@ -75,7 +75,7 @@ const Hero = ({ showApp, setShowApp }: IProps): ReactElement | null => {
                         </div>
                         <div className="hero-content-container">
                             <div className="hero-about-text">
-                                I'm a full stack web developer passionate about creating web apps with awesome user experiences.
+                                I'm a full stack web developer passionate about creating sophisticated web apps with awesome user experiences.
                                 I'm currently working as a freelance developer and looking for awesome remote opportunities.
                             </div>
                             <Button label="Get In Touch" />

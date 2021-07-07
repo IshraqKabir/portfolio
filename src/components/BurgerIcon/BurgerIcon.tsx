@@ -9,19 +9,21 @@ interface IProps {
 const BurgerIcon = ({ openNavModal }: IProps): ReactElement | null => {
 
     useEffect(() => {
-        anime.timeline({ loop: false })
-        .add({
-            targets: ".burger-icon",
-            opacity: 1,
-            duration: 0
-        })
-        .add({
-            targets: ".burger-icon-line",
-            strokeDashoffset: [anime.setDashoffset, 0],
-            easing: "easeInOutQuad",
-            duration: 300,
-            delay: (_, i) => i * 250,
-        })
+        if (document.body.getBoundingClientRect().width <= 750) {
+            anime.timeline({ loop: false })
+                .add({
+                    targets: ".burger-icon",
+                    opacity: 1,
+                    duration: 0
+                })
+                .add({
+                    targets: ".burger-icon-line",
+                    strokeDashoffset: [anime.setDashoffset, 0],
+                    easing: "easeInOutQuad",
+                    duration: 300,
+                    delay: (_, i) => i * 250,
+                })
+        }
     }, [])
 
     return (
