@@ -5,9 +5,10 @@ import "./button.css";
 
 interface IProps {
     label: string;
+    onClick: Function;
 }
 
-export default function Button({ label }: IProps) {
+export default function Button({ label, onClick }: IProps) {
     const elRef = useRef<null | AnimeTimelineInstance>(null);
 
     useEffect(() => {
@@ -24,7 +25,7 @@ export default function Button({ label }: IProps) {
             })
     }, []);
 
-    return <div className="button-outer-container">
+    return <div className="button-outer-container" onClick={() => { onClick() }}>
         <DoubleSlideReveal start={true}>
             <div className="button-container">
                 <div className="button-text">{label}</div>

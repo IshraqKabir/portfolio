@@ -35,6 +35,12 @@ const Hero = ({ showApp, setShowApp }: IProps): ReactElement | null => {
                     translateY: '-20px',
                     easing: 'easeInOutQuad',
                 })
+                .add({
+                    targets: '.social-icons-container',
+                    scaleY: [0, 1],
+                    easing: 'easeInOutQuad',
+                    duration: 250,
+                })
         }
     }, [showApp]);
 
@@ -78,7 +84,9 @@ const Hero = ({ showApp, setShowApp }: IProps): ReactElement | null => {
                                 I'm a full stack web developer passionate about creating sophisticated web apps with awesome user experiences.
                                 I'm currently working as a freelance developer and looking for awesome remote opportunities.
                             </div>
-                            <Button label="Get In Touch" />
+                            <Button label="Get In Touch" onClick={() => {
+                                window.location.href = "mailto:ishraqkabirdev@gmail.com";
+                            }} />
                         </div>
                     </div>
                 </>

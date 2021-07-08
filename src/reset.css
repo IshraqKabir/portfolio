@@ -365,7 +365,6 @@ textarea {
     padding: 0.2em 0;
 }
 
-/* body { */
-/*      overflow-x: hidden; */
-/* } */
-
+body {
+    background-color: #1c1d25;
+}
