@@ -38,3 +38,20 @@
     margin-top: 1.5rem;
 }
 
+.navModal-social-links {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.navModal-social-link-svg  {
+    margin-right: 1rem;
+    width: 30px;
+    height: 30px;
+    fill: white;
+    cursor: pointer;
+}
