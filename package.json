@@ -9,12 +9,11 @@
     "@types/animejs": "^3.1.3",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.12.4",
-    "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
     "animejs": "^3.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "^1.1.5",
+    "react-scripts": "^4.0.3",
     "typescript": "^4.3.4",
     "web-vitals": "^1.0.1"
   },
@@ -45,6 +44,8 @@
     ]
   },
   "devDependencies": {
+    "@types/react": "^17.0.14",
     "gh-pages": "^3.2.3"
-  }
+  },
+  "homepage": "https://ishraqkabir.github.io/portfolio"
 }
