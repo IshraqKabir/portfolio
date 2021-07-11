@@ -19,10 +19,6 @@ const Hero = ({ showApp, setShowApp, completeAnimation }: IProps): ReactElement 
         if (showApp) {
             animeRef.current = anime.timeline({
                 loop: false,
-                begin: () => {
-                    // @ts-ignore
-                    tawk();
-                },
                 complete: () => {
                     completeAnimation();
                 }
