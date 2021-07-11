@@ -1,5 +1,6 @@
 import anime from "animejs";
 import { ReactElement, useEffect, useState } from "react";
+import { getRandomCssClass } from "../../../utilFunctions/getRandomCssClass";
 
 interface IProps {
     start: boolean;
@@ -14,7 +15,7 @@ const DoubleSlideReveal = ({
     durations = [500, 500],
     children,
 }: IProps): ReactElement | null => {
-    const [classNames] = useState([getRandomClass(), getRandomClass()]);
+    const [classNames] = useState([getRandomCssClass(), getRandomCssClass()]);
 
     useEffect(() => {
         if (start === true) {
@@ -71,13 +72,3 @@ const DoubleSlideReveal = ({
 };
 
 export default DoubleSlideReveal;
-
-export function getRandomClass(): string {
-    var result = "";
-    var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    var charactersLength = characters.length;
-    for (var i = 0; i < charactersLength; i++) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-}

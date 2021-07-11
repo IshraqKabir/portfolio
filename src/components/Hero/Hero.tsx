@@ -10,9 +10,10 @@ import anime, { AnimeTimelineInstance } from "animejs";
 interface IProps {
     showApp: boolean;
     setShowApp: Function;
+    completeAnimation: Function;
 }
 
-const Hero = ({ showApp, setShowApp }: IProps): ReactElement | null => {
+const Hero = ({ showApp, setShowApp, completeAnimation }: IProps): ReactElement | null => {
     const animeRef = useRef<AnimeTimelineInstance | null>(null);
     useEffect(() => {
         if (showApp) {
@@ -21,6 +22,7 @@ const Hero = ({ showApp, setShowApp }: IProps): ReactElement | null => {
                 complete: () => {
                     // @ts-ignore
                     tawk();
+                    completeAnimation();
                 }
             })
                 .add({

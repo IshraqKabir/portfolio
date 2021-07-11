@@ -42,7 +42,7 @@ const Logo = ({ setShowApp }: IProps) => {
                 easing: "easeInOutQuad",
                 duration: 750,
             })
-    }, []);
+    }, [setShowApp]);
 
     return (
         <svg viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg"
