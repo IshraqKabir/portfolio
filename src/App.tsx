@@ -14,12 +14,15 @@ function App() {
 
     return (
         <DoubleSlideReveal start={true}>
-            <div className="container" style={{}}>
+            <div className="container">
                 <Hero showApp={showApp} setShowApp={setShowApp} completeAnimation={() => { setHasHeroAnimationCompleted(true) }} />
                 {showApp && (
                     <>
                         <Topbar />
                         <SocialIcons />
+                        {hasHeroAnimationCompleted ?
+                            <Experience />
+                        :null}
                     </>
                 )}
             </div>

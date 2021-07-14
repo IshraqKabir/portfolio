@@ -13,7 +13,7 @@ const Topbar = () => {
     return (
         <>
             {showNavModal && (
-                <NavModal closeNavModal={close}/>
+                <NavModal closeNavModal={close} />
             )}
             <ul className="topbar-container">
                 <Link label="Home" />
