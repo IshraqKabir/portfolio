@@ -1,47 +1,20 @@
 import anime from "animejs";
-import { ReactElement, useEffect, useRef } from "react";
-import styled, { keyframes } from "styled-components";
+import { ReactElement } from "react";
+import styled from "styled-components";
+import { useIntersection } from "../../customHooks/useIntersection";
+import { CustomLink } from "../CustomLink/CustomLink";
 
 export default function Experience(): ReactElement | null {
-    const ref = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const element = ref.current;
-
-        const callBack: IntersectionObserverCallback = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
-            entries.forEach((entry: IntersectionObserverEntry) => {
-                if (!entry.isIntersecting) return;
-
-                anime.timeline({ loop: false })
-                    .add({
-                        targets: `.experience-container`,
-                        opacity: [0, 1],
-                        translateY: '-30px',
-                        easing: "easeInOutQuad",
-                        duration: 1000,
-                    })
-
-                if (element) {
-                    observer.unobserve(element);
-                }
+    const { ref } = useIntersection(() => {
+        anime.timeline({ loop: false })
+            .add({
+                targets: `.experience-container`,
+                opacity: [0, 1],
+                translateY: '-30px',
+                easing: "easeInOutQuad",
+                duration: 1000,
             });
-        }
-
-        const options: IntersectionObserverInit = {};
-
-        const observer: IntersectionObserver = new IntersectionObserver(callBack, options);
-
-        if (element) {
-            observer.observe(element);
-        }
-
-        return () => {
-            if (element) {
-                observer.unobserve(element);
-            }
-        }
-
-    }, [])
+    });
 
     return <div ref={ref} className="experience-container" style={{
         minWidth: "100vw",
@@ -55,26 +28,68 @@ export default function Experience(): ReactElement | null {
         <InnerContainer>
             <Header
             >
-                Places I've Worked at 👍 .
+                Places I've Worked at 👍.
             </Header>
             <SingleExperience>
                 <SingleExperienceHeader>
-                    Full Stack Developer <PlaceLink label="Smartifier" link="https://smartifier.org" />
+                    Full Stack Developer <CustomLink label="@Smartifier" link="https://smartifier.org" />
                 </SingleExperienceHeader>
                 <Timeline>
                     September 2020 - Present
                 </Timeline>
                 <PointContainer>
-                    <PointIcon>
-
-                    </PointIcon>
+                    <PointIcon />
                     <div>
-                        Hellojlkadsfj l;kajsdfl; jas;ldf j;alsdfj;lkasjdf l; al;sdjf ;laskjdf ;lkasj df;lkjasd;lf jas;ldfj;laskdkjf ;laskd jf
+                        Implemented a complex quiz management system with highly interactive user experience.
+                    </div>
+                </PointContainer>
+                <PointContainer>
+                    <PointIcon />
+                    <div>
+                        Implemented a blog management system.
+                    </div>
+                </PointContainer>
+                <PointContainer>
+                    <PointIcon />
+                    <div>
+                        Implemented auth service which integrates with google oauth and gmail api.
+                    </div>
+                </PointContainer>
+                <PointContainer>
+                    <PointIcon />
+                    <div>
+                        Technologies used: <CustomLink label="Laravel" link="https://laravel.com" showUnderLine={false} />, <CustomLink label="ReactJS" link="https://reactjs.org/" showUnderLine={false} />, NextJS, MaterialUI, ChakraUI, Formik, MySQL, Redis.
+                    </div>
+                </PointContainer>
+            </SingleExperience>
+            <SingleExperience>
+                <SingleExperienceHeader>
+                    Full Stack Developer <CustomLink label="@Orderbot" link="https://orderbot.online" />
+                </SingleExperienceHeader>
+                <Timeline>
+                    March 2020 - September 2020
+                </Timeline>
+                <PointContainer>
+                    <PointIcon />
+                    <div>
+                        Implemented management systems for various businesses and designed api for chatbots.
+                    </div>
+                </PointContainer>
+                <PointContainer>
+                    <PointIcon />
+                    <div>
+                        Implemented customized product and order management systems for businesses.
+                    </div>
+                </PointContainer>
+                <PointContainer>
+                    <PointIcon />
+                    <div>
+                        Technologies used: Laravel, ReactJS, ChakraUI, React Hook Forms, MySQL.
                     </div>
                 </PointContainer>
             </SingleExperience>
         </InnerContainer>
-    </div>
+    </div>;
 }
 
 const InnerContainer = styled.div`
@@ -90,7 +105,7 @@ const Header = styled.div`
 `;
 
 const SingleExperience = styled.div`
-    padding: 0rem 0rem 0rem 1rem;
+    padding: 0rem 0rem 3rem 1rem;
 `;
 
 const SingleExperienceHeader = styled.div`
@@ -109,8 +124,8 @@ const Timeline = styled.div`
 
 const PointContainer = styled.div`
     display: flex;
-    justify-content: center;
-    padding: 1rem 0rem;
+    justify-content: flex-start;
+    padding: 0.5rem 0rem 0rem 0rem;
     color: rgb(136, 146, 176);
     line-height: 1.7;
     position: relative;
@@ -123,6 +138,7 @@ const PointIcon = styled.div`
     width: 15px;
     margin-top: 2.5px;
     margin-right: 15px;
+    overflow: hidden;
 
     &:before {
         content: "▹";
@@ -131,42 +147,5 @@ const PointIcon = styled.div`
         color: rgb(105, 55, 255);
         font-size: 20px;
         line-height: 12px;
-    }
-`;
-
-const PlaceLink = ({ label, link }: { label: string; link: string; }) => {
-    return <PlaceLinkContainer href={link} target="_blank" rel="noreferrer">@{label}
-        <span></span>
-    </PlaceLinkContainer>
-}
-
-const PlaceLinkAnimation = keyframes`
-    from {
-        width: 0px;
-    }
-
-    to {
-        width: calc(100% - 1ch);
-    }
-`;
-
-const PlaceLinkContainer = styled.a`
-    color: rgb(105, 55, 255);
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-    transition: all 1s;
-
-    &:hover {
-        &:after {
-            content: "";
-            position: absolute;
-            bottom: -5px;
-            left: 1ch;
-            width: calc(100% - 1ch);
-            height: 2px;
-            background-color: rgb(105, 55, 255);
-            animation: ${PlaceLinkAnimation} 0.5s;
-        }
     }
 `;
