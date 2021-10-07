@@ -1,19 +1,19 @@
 .topbar-container {
-  background-color: #1c1d25;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left:0;
-  height: 90px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  color: white;
+    /* background-color: #1c1d25; */
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 90px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
 }
 
 @media only screen and (max-width: 750px) {
-  .topbar-container > .link-container {
-    display: none;
-  }
+    .topbar-container > .link-container {
+        display: none;
+    }
 }
-

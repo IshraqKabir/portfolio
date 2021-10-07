@@ -16,19 +16,22 @@ export default function Experience(): ReactElement | null {
             });
     });
 
-    return <div ref={ref} className="experience-container" style={{
-        minWidth: "100vw",
-        width: "100vw",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        marginTop: "2rem",
-    }}>
+    return <div
+        ref={ref}
+        className="experience-container"
+        style={{
+            minWidth: "100vw",
+            width: "100vw",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+            marginTop: "2rem",
+        }}>
         <InnerContainer>
             <Header
             >
-                Places I've Worked at 👍.
+                Places I've Worked at 👍💥.
             </Header>
             <SingleExperience>
                 <SingleExperienceHeader>
@@ -58,7 +61,7 @@ export default function Experience(): ReactElement | null {
                 <PointContainer>
                     <PointIcon />
                     <div>
-                        Technologies used: <CustomLink label="Laravel" link="https://laravel.com" showUnderLine={false} />, <CustomLink label="ReactJS" link="https://reactjs.org/" showUnderLine={false} />, NextJS, MaterialUI, ChakraUI, Formik, MySQL, Redis.
+                        Technologies used: <CustomLink label="Laravel" link="https://laravel.com" showUnderLine={false} />, <CustomLink label="ReactJS" link="https://reactjs.org/" showUnderLine={false} />, <CustomLink label="NextJS" link="https://nextjs.org/" showUnderLine={false} /> , <CustomLink label="MaterialUI" link="https://mui.com/" showUnderLine={false} />, <CustomLink label="ChakraUI" link="https://chakra-ui.com/" showUnderLine={false} />, <CustomLink label="Formik" link="https://formik.org/" showUnderLine={false} />, <CustomLink label="MySQL" link="https://www.mysql.com/" showUnderLine={false} />, <CustomLink label="Redis" link="https://redis.io/" showUnderLine={false} /> .
                     </div>
                 </PointContainer>
             </SingleExperience>
@@ -84,7 +87,7 @@ export default function Experience(): ReactElement | null {
                 <PointContainer>
                     <PointIcon />
                     <div>
-                        Technologies used: Laravel, ReactJS, ChakraUI, React Hook Forms, MySQL.
+                        Technologies used: <CustomLink label="Laravel" link="https://laravel.com" showUnderLine={false} />, <CustomLink label="ReactJS" link="https://reactjs.org/" showUnderLine={false} />, <CustomLink label="ChakraUI" link="https://chakra-ui.com/" showUnderLine={false} />, <CustomLink label="React Hook Forms" link="https://react-hook-form.com/" showUnderLine={false} />, <CustomLink label="MySQL" link="https://www.mysql.com/" showUnderLine={false} />.
                     </div>
                 </PointContainer>
             </SingleExperience>
