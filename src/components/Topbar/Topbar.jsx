@@ -12,9 +12,7 @@ const Topbar = () => {
 
     return (
         <>
-            {showNavModal && (
-                <NavModal closeNavModal={close} />
-            )}
+            {showNavModal && <NavModal closeNavModal={close} />}
             <ul className="topbar-container">
                 <Link label="Home" />
                 <Link label="Experience" />
@@ -26,4 +24,3 @@ const Topbar = () => {
 };
 
 export default Topbar;
-

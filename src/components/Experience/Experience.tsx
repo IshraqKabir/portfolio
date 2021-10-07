@@ -27,6 +27,7 @@ export default function Experience(): ReactElement | null {
             alignItems: "center",
             flexDirection: "column",
             marginTop: "2rem",
+            zIndex: -5,
         }}>
         <InnerContainer>
             <Header>
