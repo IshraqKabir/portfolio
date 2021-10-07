@@ -1,52 +1,51 @@
 .hero-container {
-  min-width: 100vw;
-  min-height: 100vh;
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 90px;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3rem;
 }
 
 .content {
-  color: #fff;
-  padding: 3rem 1rem;
+    color: #fff;
+    padding: 3rem 1rem;
 }
 
 .hi-text {
-  color: rgb(105, 55, 255);
-  /* color: rgb(100, 255, 218); */
-  font-weight: 600;
-  font-size: 1.3rem;                               
-  padding: 5px;
-  margin-bottom: 1rem;
+    color: rgb(105, 55, 255);
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding: 5px;
+    margin-bottom: 1rem;
 }
 
 .hero-title {
-  font-size: clamp(40px, 3vw, 80px);
-  color: rgb(204, 214, 246);
-  font-weight: bold;
-  overflow: hidden;
-  padding: 5px;
-  margin-bottom: 0.5rem;
+    font-size: clamp(40px, 3vw, 80px);
+    color: rgb(204, 214, 246);
+    font-weight: bold;
+    overflow: hidden;
+    padding: 5px;
+    margin-bottom: 0.5rem;
 }
 
 .another-title {
-  font-size: clamp(40px, 3vw, 80px);
+    font-size: clamp(40px, 3vw, 80px);
     color: rgb(136, 146, 176);
     margin-bottom: 1rem;
 }
 
 .hero-title-text {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .hero-sub_title {
-  font-style: italic;
-  font-size: 1.8rem;
-  padding: 0.5rem 0;
+    font-style: italic;
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
 }
 
 .letter {
@@ -66,4 +65,3 @@
     line-height: 1.8;
     color: rgb(136, 146, 176);
 }
-

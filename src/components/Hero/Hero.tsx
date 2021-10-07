@@ -1,8 +1,8 @@
+import { ReactElement, useEffect, useRef } from "react";
 import Logo from "../Logo/Logo";
 import "./hero.css";
 
 import InteractiveBackground from "../animation/InteractiveBackground/InteractiveBackground";
-import { ReactElement, useEffect, useRef } from "react";
 
 import Button from "../Button/Button";
 import anime, { AnimeTimelineInstance } from "animejs";
@@ -15,13 +15,13 @@ interface IProps {
 
 const Hero = ({ showApp, setShowApp, completeAnimation }: IProps): ReactElement | null => {
     const animeRef = useRef<AnimeTimelineInstance | null>(null);
+
     useEffect(() => {
         if (showApp) {
             animeRef.current = anime.timeline({
                 loop: false,
-                complete: () => {
-                    completeAnimation();
-                }
+                complete: () => completeAnimation()
+
             })
                 .add({
                     targets: '.letter',
@@ -40,7 +40,7 @@ const Hero = ({ showApp, setShowApp, completeAnimation }: IProps): ReactElement 
                     scaleY: [0, 1],
                     easing: 'easeInOutQuad',
                     duration: 250,
-                })
+                });
         }
     }, [showApp]);
 
@@ -62,14 +62,14 @@ const Hero = ({ showApp, setShowApp, completeAnimation }: IProps): ReactElement 
                             {[...hi_text.split("")].map((letter, index) => {
                                 return (
                                     <span key={index} className="letter">{letter}</span>
-                                )
+                                );
                             })}
                         </div>
                         <div className="hero-title">
                             {[...title.split("")].map((letter, index) => {
                                 return (
                                     <span key={index} className="letter">{letter}</span>
-                                )
+                                );
                             })}
                         </div>
                         <div className="hero-title another-title">
