@@ -1,5 +1,5 @@
-import anime from "animejs";
 import { ReactElement } from "react";
+import anime from "animejs";
 import styled from "styled-components";
 import { useIntersection } from "../../customHooks/useIntersection";
 import { CustomLink } from "../CustomLink/CustomLink";
@@ -29,8 +29,7 @@ export default function Experience(): ReactElement | null {
             marginTop: "2rem",
         }}>
         <InnerContainer>
-            <Header
-            >
+            <Header>
                 Places I've Worked at 👍💥.
             </Header>
             <SingleExperience>

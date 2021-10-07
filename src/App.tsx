@@ -10,19 +10,19 @@ import Experience from "./components/Experience/Experience";
 
 function App() {
     const [showApp, setShowApp] = useState(false);
-    const [hasHeroAnimationCompleted, setHasHeroAnimationCompleted] = useState(false)
+    const [hasHeroAnimationCompleted, setHasHeroAnimationCompleted] = useState(false);
 
     return (
         <DoubleSlideReveal start={true}>
             <div className="container">
-                <Hero showApp={showApp} setShowApp={setShowApp} completeAnimation={() => { setHasHeroAnimationCompleted(true) }} />
+                <Hero showApp={showApp} setShowApp={setShowApp} completeAnimation={() => { setHasHeroAnimationCompleted(true); }} />
                 {showApp && (
                     <>
                         <Topbar />
                         <SocialIcons />
                         {hasHeroAnimationCompleted ?
                             <Experience />
-                        :null}
+                            : null}
                     </>
                 )}
             </div>

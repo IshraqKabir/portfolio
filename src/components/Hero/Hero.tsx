@@ -1,8 +1,8 @@
+import { ReactElement, useEffect, useRef } from "react";
 import Logo from "../Logo/Logo";
 import "./hero.css";
 
 import InteractiveBackground from "../animation/InteractiveBackground/InteractiveBackground";
-import { ReactElement, useEffect, useRef } from "react";
 
 import Button from "../Button/Button";
 import anime, { AnimeTimelineInstance } from "animejs";
