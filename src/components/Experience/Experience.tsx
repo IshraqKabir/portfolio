@@ -24,14 +24,14 @@ export default function Experience(): ReactElement | null {
             width: "100vw",
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
             flexDirection: "column",
             marginTop: "2rem",
-            zIndex: -5,
+            padding: "0rem 1rem",
+            opacity: 0,
         }}>
         <InnerContainer>
             <Header>
-                Places I've Worked at 👍💥.
+                Places I've Worked at.
             </Header>
             <SingleExperience>
                 <SingleExperienceHeader>
@@ -96,7 +96,8 @@ export default function Experience(): ReactElement | null {
 }
 
 const InnerContainer = styled.div`
-    max-width: 40ch;
+    max-width: 65ch;
+    padding: 0rem 1rem;
 `;
 
 const Header = styled.div`

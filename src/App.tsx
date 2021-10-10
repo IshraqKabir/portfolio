@@ -1,8 +1,7 @@
-import Hero from "./components/Hero/Hero";
-
-import "./app.css";
 import { useState } from "react";
+import "./app.css";
 
+import Hero from "./components/Hero/Hero";
 import Topbar from "./components/Topbar/Topbar.jsx";
 import DoubleSlideReveal from "./components/animation/DoubleSlideReveal/DoubleSlideReveal";
 import SocialIcons from "./components/SocialIcons/SocialIcons";
@@ -15,16 +14,18 @@ function App() {
     return (
         <DoubleSlideReveal start={true}>
             <div className="container">
-                <Hero showApp={showApp} setShowApp={setShowApp} completeAnimation={() => { setHasHeroAnimationCompleted(true); }} />
-                {showApp && (
-                    <>
-                        <Topbar />
-                        <SocialIcons />
-                        {hasHeroAnimationCompleted ?
-                            <Experience />
-                            : null}
-                    </>
-                )}
+                <div className="inner-container">
+                    <Hero showApp={showApp} setShowApp={setShowApp} completeAnimation={() => { setHasHeroAnimationCompleted(true); }} />
+                    {showApp && (
+                        <>
+                            <Topbar />
+                            <SocialIcons />
+                            {hasHeroAnimationCompleted ?
+                                <Experience />
+                                : null}
+                        </>
+                    )}
+                </div>
             </div>
         </DoubleSlideReveal>
     );

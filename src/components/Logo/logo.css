@@ -1,22 +1,21 @@
 .logo {
-  cursor: pointer;
-  position: fixed;
-  width: 150px;
-  z-index: 2;
+    cursor: pointer;
+    position: fixed;
+    width: 150px;
+    z-index: 2;
+    text-align: center;
 }
 
 .logo_text {
-  stroke-dashoffset: 0;
+    stroke-dashoffset: 0;
 }
 
 .logo_text {
-  opacity: 1;
-  stroke-width: 150px;
-  stroke: rgb(105, 55, 255);
+    opacity: 1;
+    stroke-width: 150px;
+    stroke: rgb(105, 55, 255);
 }
 
 .logo_icon {
     display: none;
 }
-
-

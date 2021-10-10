@@ -1,5 +1,5 @@
 import anime, { AnimeTimelineInstance } from "animejs";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 
 import "./logo.css";
 
@@ -17,6 +17,11 @@ const Logo = ({ setShowApp }: IProps) => {
                 complete: () => {
                     setShowApp(true);
                 },
+            })
+            .add({
+                targets: ".logo",
+                left: document.body.getBoundingClientRect().width / 2 - 60,
+                duration: 0
             })
             .add({
                 targets: ".logo_icon",
@@ -41,7 +46,7 @@ const Logo = ({ setShowApp }: IProps) => {
                 scale: [1, 0.3],
                 easing: "easeInOutQuad",
                 duration: 750,
-            })
+            });
     }, [setShowApp]);
 
     return (
@@ -54,15 +59,15 @@ const Logo = ({ setShowApp }: IProps) => {
             <defs>
                 <linearGradient id="paint0_linear" x1="1029.75" y1="172" x2="1029.75" y2="854.5" gradientUnits="userSpaceOnUse">
                     <stop stopColor="#00B4DB" />
-                    <stop offset="1" stopColor="#00B4DB"/>
+                    <stop offset="1" stopColor="#00B4DB" />
                 </linearGradient>
                 <linearGradient id="paint1_linear" x1="404" y1="129" x2="404" y2="878.5" gradientUnits="userSpaceOnUse">
                     <stop stopColor="#00B4DB" />
-                    <stop offset="1" stopColor="#00B4DB"/>
+                    <stop offset="1" stopColor="#00B4DB" />
                 </linearGradient>
                 <linearGradient id="paint2_linear" x1="714" y1="129" x2="714" y2="878.5" gradientUnits="userSpaceOnUse">
                     <stop stopColor="#00B4DB" />
-                    <stop offset="1" stopColor="#00B4DB"/>
+                    <stop offset="1" stopColor="#00B4DB" />
                 </linearGradient>
             </defs>
         </svg>
