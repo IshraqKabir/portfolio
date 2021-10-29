@@ -6,6 +6,7 @@ import Topbar from "./components/Topbar/Topbar.jsx";
 import DoubleSlideReveal from "./components/animation/DoubleSlideReveal/DoubleSlideReveal";
 import SocialIcons from "./components/SocialIcons/SocialIcons";
 import Experience from "./components/Experience/Experience";
+import { Projects } from "./components/Projects/Projects";
 
 function App() {
     const [showApp, setShowApp] = useState(false);
@@ -21,7 +22,10 @@ function App() {
                             <Topbar />
                             <SocialIcons />
                             {hasHeroAnimationCompleted ?
-                                <Experience />
+                                <>
+                                    <Experience />
+                                    <Projects />
+                                </>
                                 : null}
                         </>
                     )}

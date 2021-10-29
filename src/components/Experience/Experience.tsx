@@ -28,6 +28,7 @@ export default function Experience(): ReactElement | null {
             marginTop: "2rem",
             padding: "0rem 1rem",
             opacity: 0,
+            paddingBottom: "10rem"
         }}>
         <InnerContainer>
             <Header>
