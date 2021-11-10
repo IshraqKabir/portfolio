@@ -1,5 +1,7 @@
 import { SingleProjectProps } from "../components/SingleProject/SingleProject";
 
+import { technologies, } from "./experienceData";
+
 const style = {
     lineHeight: 1.8,
     marginRight: "0.5rem",
@@ -12,32 +14,27 @@ export const projectsData: { [key: string]: SingleProjectProps; } = {
         description: [`asdfasdfasdf jalksjdflkj asdfklj alsd asdf. asdfkjasdf asdfasdf assdf asdfasfd asdf asdf asfd asdf asdf asdf asdf asd fasdf asdf asdf as dfasd fasd fasd fasd asdf asdf asdf asdfd fasdfd fasd asd fasdfd asdf f `, `sdfasdfasdf lsdfsdjfkasldkfjaksdf`],
         technologies: [
             {
-                label: "React Native",
-                link: "",
+                ...technologies.react_native,
                 showUnderLine: false,
                 style: style
             },
             {
-                label: "Node JS",
-                link: "",
+                ...technologies.node,
                 showUnderLine: false,
                 style: style,
             },
             {
-                label: "Redux Toolkit",
-                link: "",
+                ...technologies.redux_toolkit,
                 showUnderLine: false,
                 style: style,
             },
             {
-                label: "React Native Reanimated 2",
-                link: "",
+                ...technologies.reanimated,
                 showUnderLine: false,
                 style: style,
             },
             {
-                label: "Socket.IO",
-                link: "",
+                ...technologies.socket_io,
                 showUnderLine: false,
                 style: style,
             }
@@ -49,20 +46,17 @@ export const projectsData: { [key: string]: SingleProjectProps; } = {
         description: [`asdfasdfasdf jalksjdflkj asdfklj alsd asdf. asdfkjasdf asdfasdf assdf asdfasfd asdf asdf asfd asdf asdf asdf asdf asd fasdf asdf asdf as dfasd fasd fasd fasd asdf asdf asdf asdfd fasdfd fasd asd fasdfd asdf f `, `sdfasdfasdf lsdfsdjfkasldkfjaksdf`],
         technologies: [
             {
-                label: "ReactJS",
-                link: "",
+                ...technologies.react,
                 showUnderLine: false,
                 style: style
             },
             {
-                label: "AnimeJS",
-                link: "",
+                ...technologies.anime_js,
                 showUnderLine: false,
                 style: style,
             },
             {
-                label: "Styled Components",
-                link: "",
+                ...technologies.styled_components,
                 showUnderLine: false,
                 style: style,
             },

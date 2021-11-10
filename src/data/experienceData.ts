@@ -31,9 +31,16 @@ type ITechnologyKey =
     | "tailwind"
     | "quickadmin"
     | "orchid"
-    | "laravel_websockets";
+    | "laravel_websockets"
+    | "react_native"
+    | "node"
+    | "redux_toolkit"
+    | "reanimated"
+    | "socket_io"
+    | "anime_js"
+    | "styled_components";
 
-const technologies:
+export const technologies:
     {
         [key in ITechnologyKey]: ITechnology;
     }
@@ -52,6 +59,13 @@ const technologies:
     "quickadmin": { label: "Quick Admin Panel", link: "https://quickadminpanel.com/" },
     "orchid": { label: "Laravel Orchid", link: "https://orchid.software/en/" },
     "laravel_websockets": { label: "Laravel Websockets", link: "https://beyondco.de/docs/laravel-websockets/getting-started/introduction" },
+    "react_native": { label: "React Native", link: "https://reactnative.dev/" },
+    "node": { label: "Node JS", link: "https://nodejs.org" },
+    "redux_toolkit": { label: "Redux Toolkit", link: "https://redux-toolkit.js.org/" },
+    "reanimated": { label: "React Native Reanimated 2", link: "https://docs.swmansion.com/react-native-reanimated/" },
+    "socket_io": { label: "Socket.IO", link: "https://socket.io" },
+    "anime_js": { label: "AnimeJS", link: "https://animejs.com/" },
+    "styled_components": { label: "Styled Components", link: "https://styled-components.com/" },
 };
 
 export const experienceData: { [key: string]: IExperienceData; } = {
