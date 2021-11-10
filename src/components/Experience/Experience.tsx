@@ -3,6 +3,7 @@ import anime from "animejs";
 import styled from "styled-components";
 import { useIntersection } from "../../customHooks/useIntersection";
 import { CustomLink } from "../CustomLink/CustomLink";
+import { experienceData } from "../../data/experienceData";
 
 export default function Experience(): ReactElement | null {
     const { ref } = useIntersection(() => {
@@ -34,64 +35,42 @@ export default function Experience(): ReactElement | null {
             <Header>
                 Places I've Worked at.
             </Header>
-            <SingleExperience>
-                <SingleExperienceHeader>
-                    Full Stack Developer <CustomLink label="@Smartifier" link="https://smartifier.org" />
-                </SingleExperienceHeader>
-                <Timeline>
-                    September 2020 - Present
-                </Timeline>
-                <PointContainer>
-                    <PointIcon />
-                    <div>
-                        Implemented a complex quiz management system with highly interactive user experience.
-                    </div>
-                </PointContainer>
-                <PointContainer>
-                    <PointIcon />
-                    <div>
-                        Implemented a blog management system.
-                    </div>
-                </PointContainer>
-                <PointContainer>
-                    <PointIcon />
-                    <div>
-                        Implemented auth service which integrates with google oauth and gmail api.
-                    </div>
-                </PointContainer>
-                <PointContainer>
-                    <PointIcon />
-                    <div>
-                        Technologies used: <CustomLink label="Laravel" link="https://laravel.com" showUnderLine={false} />, <CustomLink label="ReactJS" link="https://reactjs.org/" showUnderLine={false} />, <CustomLink label="NextJS" link="https://nextjs.org/" showUnderLine={false} /> , <CustomLink label="MaterialUI" link="https://mui.com/" showUnderLine={false} />, <CustomLink label="ChakraUI" link="https://chakra-ui.com/" showUnderLine={false} />, <CustomLink label="Formik" link="https://formik.org/" showUnderLine={false} />, <CustomLink label="MySQL" link="https://www.mysql.com/" showUnderLine={false} />, <CustomLink label="Redis" link="https://redis.io/" showUnderLine={false} /> .
-                    </div>
-                </PointContainer>
-            </SingleExperience>
-            <SingleExperience>
-                <SingleExperienceHeader>
-                    Full Stack Developer <CustomLink label="@Orderbot" link="https://orderbot.online" />
-                </SingleExperienceHeader>
-                <Timeline>
-                    March 2020 - September 2020
-                </Timeline>
-                <PointContainer>
-                    <PointIcon />
-                    <div>
-                        Implemented management systems for various businesses and designed api for chatbots.
-                    </div>
-                </PointContainer>
-                <PointContainer>
-                    <PointIcon />
-                    <div>
-                        Implemented customized product and order management systems for businesses.
-                    </div>
-                </PointContainer>
-                <PointContainer>
-                    <PointIcon />
-                    <div>
-                        Technologies used: <CustomLink label="Laravel" link="https://laravel.com" showUnderLine={false} />, <CustomLink label="ReactJS" link="https://reactjs.org/" showUnderLine={false} />, <CustomLink label="ChakraUI" link="https://chakra-ui.com/" showUnderLine={false} />, <CustomLink label="React Hook Forms" link="https://react-hook-form.com/" showUnderLine={false} />, <CustomLink label="MySQL" link="https://www.mysql.com/" showUnderLine={false} />.
-                    </div>
-                </PointContainer>
-            </SingleExperience>
+            {Object.keys(experienceData).map(key => {
+                const experience = experienceData[key];
+
+                return (
+                    <SingleExperience>
+                        <SingleExperienceHeader>
+                            {experience.company.role} <CustomLink label={experience.company.label} link={experience.company.link} />
+                        </SingleExperienceHeader>
+                        <Timeline>
+                            {experience.timeline}
+                        </Timeline>
+                        {experience.points.map(point => {
+                            return (
+                                <PointContainer>
+                                    <PointIcon />
+                                    <div>
+                                        {point}
+                                    </div>
+                                </PointContainer>
+                            );
+                        })}
+                        <PointContainer>
+                            <PointIcon />
+                            <div>
+                                Technologies used: {experience.technologies.map((tech, index) => {
+                                    return (
+                                        <span>
+                                            <CustomLink label={tech.label} link={tech.link} showUnderLine={false} /> {index === experience.technologies.length - 1 ? "." : ","}
+                                        </span>
+                                    );
+                                })}
+                            </div>
+                        </PointContainer>
+                    </SingleExperience>
+                );
+            })}
         </InnerContainer>
     </div>;
 }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./app.css";
 
 import Hero from "./components/Hero/Hero";
-import Topbar from "./components/Topbar/Topbar.jsx";
+import Topbar from "./components/Topbar/Topbar";
 import DoubleSlideReveal from "./components/animation/DoubleSlideReveal/DoubleSlideReveal";
 import SocialIcons from "./components/SocialIcons/SocialIcons";
 import Experience from "./components/Experience/Experience";

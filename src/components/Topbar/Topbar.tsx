@@ -2,7 +2,7 @@ import "./topbar.css";
 import Link from "../Link/Link";
 import NavModal from "../NavModal/NavModal";
 import { useState } from "react";
-import BurgerIcon from "../BurgerIcon/BurgerIcon.tsx";
+import BurgerIcon from "../BurgerIcon/BurgerIcon";
 
 const Topbar = () => {
     const [showNavModal, setShowNavModal] = useState(false);

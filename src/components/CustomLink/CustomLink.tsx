@@ -1,12 +1,19 @@
-import styled, { keyframes } from "styled-components";
+import styled, { CSSProperties, keyframes } from "styled-components";
 
+export interface CustomLinkProps {
+    label: string;
+    link: string;
+    showUnderLine?: boolean;
+    style?: CSSProperties;
+}
 
-export const CustomLink = ({ label, link, showUnderLine = true }: { label: string; link: string; showUnderLine?: boolean; }) => {
+export const CustomLink = ({ label, link, showUnderLine = true, style }: CustomLinkProps) => {
     if (!showUnderLine) {
-        return <ContainerWithoutAnimation href={link} target="_blank" rel="noreferrer">{label}</ContainerWithoutAnimation>;
+        return <ContainerWithoutAnimation href={link} target="_blank" rel="noreferrer" style={style ? { ...style } : {}}>{label}</ContainerWithoutAnimation>;
     }
 
-    return <Container href={link} target="_blank" rel="noreferrer">{label}
+    return <Container href={link} target="_blank" rel="noreferrer" style={style ? { ...style } : {}}>
+        {label}
         <span></span>
     </Container>;
 };

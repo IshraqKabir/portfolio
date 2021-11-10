@@ -10,7 +10,7 @@ interface IProps {
     show_underline?: boolean;
 }
 
-const Link = ({ label, color = "rgb(176, 178, 195)", page_name, show_underline = true }: IProps): ReactElement | null => {
+const Link = ({ label, color = "rgb(176, 178, 195)", show_underline = true }: IProps): ReactElement | null => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
