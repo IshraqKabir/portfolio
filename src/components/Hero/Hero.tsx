@@ -81,8 +81,8 @@ const Hero = ({ showApp, setShowApp, completeAnimation }: IProps): ReactElement 
                         </div>
                         <div className="hero-content-container">
                             <div className="hero-about-text">
-                                I'm a full stack web developer passionate about creating sophisticated web apps with awesome user experiences.
-                                I'm currently working as a freelance developer and looking for awesome full time opportunities.
+                                I'm a senior frontend engineer with 6+ years of building React, Next.js and TypeScript products end to end.
+                                I helped scale a consumer platform from 700K to 8M+ monthly active users, and I'm now an Associate Tech Lead leading a team of 5 engineers.
                             </div>
                             <Button label="Get In Touch" onClick={() => {
                                 window.location.href = "mailto:ishraqkabirdev@gmail.com";

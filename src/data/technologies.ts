@@ -22,7 +22,17 @@ export type ITechnologyKey =
     | "socket_io"
     | "anime_js"
     | "styled_components"
-    | "typescript";
+    | "typescript"
+    | "vue"
+    | "nuxt"
+    | "postgresql"
+    | "mongodb"
+    | "aws"
+    | "cloudflare"
+    | "docker"
+    | "kubernetes"
+    | "jenkins"
+    | "stripe";
 
 
 export const technologies: {
@@ -49,5 +59,15 @@ export const technologies: {
     "socket_io": { label: "Socket.IO", link: "https://socket.io" },
     "anime_js": { label: "AnimeJS", link: "https://animejs.com/" },
     "styled_components": { label: "Styled Components", link: "https://styled-components.com/" },
-    "typescript": { label: "TypeScript", link: "https://www.typescriptlang.org/" }
+    "typescript": { label: "TypeScript", link: "https://www.typescriptlang.org/" },
+    "vue": { label: "Vue", link: "https://vuejs.org/" },
+    "nuxt": { label: "Nuxt", link: "https://nuxt.com/" },
+    "postgresql": { label: "PostgreSQL", link: "https://www.postgresql.org/" },
+    "mongodb": { label: "MongoDB", link: "https://www.mongodb.com/" },
+    "aws": { label: "AWS", link: "https://aws.amazon.com/" },
+    "cloudflare": { label: "Cloudflare", link: "https://www.cloudflare.com/" },
+    "docker": { label: "Docker", link: "https://www.docker.com/" },
+    "kubernetes": { label: "Kubernetes", link: "https://kubernetes.io/" },
+    "jenkins": { label: "Jenkins", link: "https://www.jenkins.io/" },
+    "stripe": { label: "Stripe", link: "https://stripe.com/" },
 };

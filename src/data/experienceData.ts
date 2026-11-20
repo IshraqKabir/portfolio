@@ -15,33 +15,94 @@ export interface ITechnology {
 interface ICompany {
     role: string;
     label: string;
-    link: string;
+    link?: string;
 }
 
 export const experienceData: { [key: string]: IExperienceData; } = {
-    jayed_corp: {
+    transmedia_lead: {
+        company: {
+            role: "Associate Tech Lead",
+            label: "@Transmedia",
+        },
+        timeline: "October 2024 - Present (Remote)",
+        points: [
+            "Take on the hardest front-end and back-end problems when other engineers are stuck.",
+            "Design the architecture for new products and features, built to scale from day one.",
+            "Lead a team of 5 software engineers and set the team's coding standards through code review.",
+            "Shipped multiple breaking releases with zero downtime.",
+        ],
+        technologies: [
+            technologies.react,
+            technologies.next,
+            technologies.typescript,
+            technologies.node,
+            technologies.mongodb,
+            technologies.aws,
+            technologies.docker,
+            technologies.kubernetes,
+            technologies.jenkins,
+        ]
+    },
+    transmedia_senior: {
+        company: {
+            role: "Senior Frontend Engineer",
+            label: "@Transmedia",
+        },
+        timeline: "January 2022 - September 2024 (Remote)",
+        points: [
+            "Played a key role in scaling the platform from 700K to over 8M monthly active users.",
+            "Built complex, intuitive interfaces in React/Next.js and Vue/Nuxt that improved user engagement.",
+            "Built asset delivery on Cloudflare CDN and S3 that sped up the site and fixed hard SEO problems, raising search rankings.",
+        ],
+        technologies: [
+            technologies.react,
+            technologies.next,
+            technologies.vue,
+            technologies.nuxt,
+            technologies.typescript,
+            technologies.tailwind,
+            technologies.redux_toolkit,
+            technologies.cloudflare,
+            technologies.aws,
+        ]
+    },
+    corsphere: {
+        company: {
+            role: "Full Stack Engineer",
+            label: "@Corsphere",
+        },
+        timeline: "June 2022 - Present (Part-time, Remote)",
+        points: [
+            "Built the frontend, backend and deployment pipeline from scratch.",
+            "Optimized heavy PostgreSQL queries and added data sampling so charts render large datasets without UI lag.",
+            "Built and maintain APIs that serve large datasets to the machine learning team.",
+        ],
+        technologies: [
+            technologies.react,
+            technologies.typescript,
+            technologies.node,
+            technologies.postgresql,
+            technologies.docker,
+        ]
+    },
+    next_ventures: {
         company: {
             role: "Full Stack Developer",
-            label: "@JayedCorp",
-            link: "https://jayedcorp.com/",
+            label: "@NEXT Ventures (formerly Jayed Corp)",
         },
-        timeline: "June 2020 - December 2021(Freelance Contract)",
+        timeline: "June 2021 - November 2021 (Contract)",
         points: [
-            "Stripe Integration with recurring payment systems",
-            "Built and designed apis for integrating with Telegram bots",
-            "Created Services to assist with trading and designing apis",
-            "Built User wise dashboards to see real time trading and buying and managing plans.",
-            "Built and designed user devices limiting system",
+            "Built per-user dashboards for real-time trading, purchases and plan management.",
+            "Integrated Stripe recurring payments.",
         ],
         technologies: [
             technologies.laravel,
             technologies.livewire,
             technologies.tailwind,
-            technologies.quickadmin,
-            technologies.orchid,
             technologies.laravel_websockets,
             technologies.mysql,
             technologies.redis,
+            technologies.stripe,
         ]
     },
     orderbot: {
@@ -50,11 +111,10 @@ export const experienceData: { [key: string]: IExperienceData; } = {
             label: "@Orderbot",
             link: "https://orderbot.online",
         },
-        timeline: "March 2020 - October 2021(Freelance Contract)",
+        timeline: "March 2020 - October 2021 (Contract)",
         points: [
-            "Built management systems for various businesses and designed api for chatbots.",
-            "Created E-Commerce solution for businesses.",
-            "Implemented customized product and order management systems for businesses.",
+            "Built an e-commerce platform from scratch with custom product and order management.",
+            "Designed the chatbot APIs and built management systems for several businesses.",
         ],
         technologies: [
             technologies.laravel,
@@ -65,28 +125,4 @@ export const experienceData: { [key: string]: IExperienceData; } = {
             technologies.redis,
         ]
     },
-    smartifier: {
-        company: {
-            role: "Full Stack Developer",
-            label: "@Smartifier",
-            link: "https://smartifier.org",
-        },
-        timeline: "September 2020 - September 2021 (Freelance Contract)",
-        points: [
-            `built a complex quiz management system with highly interactive user experience.`,
-            `Implemented a blog management system.`,
-            `Implemented auth service which integrates with google oauth and gmail api.`,
-        ],
-        technologies: [
-            technologies.laravel,
-            technologies.react,
-            technologies.next,
-            technologies.typescript,
-            technologies.material_ui,
-            technologies.chakra_ui,
-            technologies.formik,
-            technologies.mysql,
-            technologies.redis,
-        ]
-    }
 };

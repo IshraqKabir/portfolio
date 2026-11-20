@@ -21,8 +21,8 @@ export default function Experience(): ReactElement | null {
         ref={ref}
         className="experience-container"
         style={{
-            minWidth: "100vw",
-            width: "100vw",
+            width: "100%",
+            boxSizing: "border-box",
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
@@ -41,7 +41,10 @@ export default function Experience(): ReactElement | null {
                 return (
                     <SingleExperience>
                         <SingleExperienceHeader>
-                            {experience.company.role} <CustomLink label={experience.company.label} link={experience.company.link} />
+                            {experience.company.role}{" "}
+                            {experience.company.link
+                                ? <CustomLink label={experience.company.label} link={experience.company.link} />
+                                : <CompanyLabel>{experience.company.label}</CompanyLabel>}
                         </SingleExperienceHeader>
                         <Timeline>
                             {experience.timeline}
@@ -78,6 +81,7 @@ export default function Experience(): ReactElement | null {
 const InnerContainer = styled.div`
     max-width: 65ch;
     padding: 0rem 1rem;
+    box-sizing: border-box;
 `;
 
 const Header = styled.div`
@@ -99,6 +103,10 @@ const SingleExperienceHeader = styled.div`
     font-size: min(16px, 1.2rem);
 `;
 
+
+const CompanyLabel = styled.span`
+    color: rgb(105, 55, 255);
+`;
 
 const Timeline = styled.div`
     color: rgb(136, 146, 176);
