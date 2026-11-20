@@ -82,7 +82,7 @@ const Hero = ({ showApp, setShowApp, completeAnimation }: IProps): ReactElement 
                         <div className="hero-content-container">
                             <div className="hero-about-text">
                                 I'm a full stack web developer passionate about creating sophisticated web apps with awesome user experiences.
-                                I'm currently working as a freelance developer and looking for awesome remote opportunities.
+                                I'm currently working as a freelance developer and looking for awesome full time opportunities.
                             </div>
                             <Button label="Get In Touch" onClick={() => {
                                 window.location.href = "mailto:ishraqkabirdev@gmail.com";

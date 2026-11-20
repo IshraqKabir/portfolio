@@ -7,9 +7,21 @@ export interface SingleProjectProps {
     timeline: String;
     description: String[];
     technologies: (CustomLinkProps & { style?: CSSProperties; })[];
+    repositories: IRepository[];
 }
 
-export const SingleProject = ({ title, timeline, description, technologies }: SingleProjectProps) => {
+interface IRepository {
+    link: string;
+    title?: string;
+}
+
+export const SingleProject = ({
+    title,
+    timeline,
+    description,
+    technologies,
+    repositories
+}: SingleProjectProps) => {
     return <Container>
         <Header>{title}</Header>
         <Timeline>{timeline}</Timeline>
@@ -32,24 +44,22 @@ export const SingleProject = ({ title, timeline, description, technologies }: Si
                     })}
                 </TechnologiesContainer>
             </Description>
-            <BannerImageContainer>
+            {/* <BannerImageContainer>
                 <img src="https://images.unsplash.com/photo-1635434033429-827adfad864b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" height="100%" width="100%" />
-            </BannerImageContainer>
+            </BannerImageContainer> */}
         </div>
-        <a href="https://facebook.com" style={{ textDecoration: "none" }} target="_blank">
-            <RepoWithTextContainer>
-                <div>Frontend Code</div>
-                <div style={{ marginLeft: "0.5rem" }}><GithubIcon link="" className="asdf" /></div>
-            </RepoWithTextContainer>
-        </a>
-        <a href="https://facebook.com" style={{ textDecoration: "none" }} target="_blank">
-            <RepoWithTextContainer>
-                <div>Backend Code</div>
-                <div style={{ marginLeft: "0.5rem" }}>
-                    <GithubIcon link="" className="asdf" />
-                </div>
-            </RepoWithTextContainer>
-        </a>
+        {repositories.map(repository => {
+            return (
+                <a href={repository.link} style={{ textDecoration: "none" }} target="_blank">
+                    <RepoWithTextContainer>
+                        <div>{repository.title}</div>
+                        <div style={{ marginLeft: "0.5rem" }}>
+                            <GithubIcon link={repository.link} className="asdf" />
+                        </div>
+                    </RepoWithTextContainer>
+                </a>
+            );
+        })}
     </Container>;
 };
 
