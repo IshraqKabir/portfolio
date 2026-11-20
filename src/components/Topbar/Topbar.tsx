@@ -16,7 +16,6 @@ const Topbar = () => {
             <ul className="topbar-container">
                 <Link label="Home" />
                 <Link label="Experience" />
-                <Link label="Projects" />
                 <BurgerIcon openNavModal={show} />
             </ul>
         </>

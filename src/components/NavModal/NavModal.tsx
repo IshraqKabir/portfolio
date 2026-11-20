@@ -93,7 +93,6 @@ export default function NavModal({ closeNavModal }: IProps): ReactElement | null
                     <div className="navModal-links">
                         <Link label="Home" color="#fff" show_underline={false} />
                         <Link label="Experience" color="#fff" show_underline={false} />
-                        <Link label="Projects" color="#fff" show_underline={false} />
                     </div>
                     <div className="navModal-social-links">
                         <a href="https://github.com/IshraqKabir" aria-label="Github" target="_blank" rel="noreferrer">

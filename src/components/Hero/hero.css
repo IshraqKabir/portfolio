@@ -23,7 +23,8 @@
 }
 
 .hero-title {
-    font-size: clamp(40px, 3vw, 80px);
+    /* max 56px so the tagline fits the 65ch column on wide screens */
+    font-size: clamp(40px, 3vw, 56px);
     color: rgb(204, 214, 246);
     font-weight: bold;
     overflow: hidden;
@@ -32,7 +33,7 @@
 }
 
 .another-title {
-    font-size: clamp(40px, 3vw, 80px);
+    font-size: clamp(40px, 3vw, 56px);
     color: rgb(136, 146, 176);
     margin-bottom: 1rem;
 }
